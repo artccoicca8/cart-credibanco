@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add Employee</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+	<div class="container my-5">
+		<h3>Carrito Boton de Pago</h3>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-10">
+					<form action="https://testecommerce.credibanco.com/vpos2/MM/transactionStart20.do"  th:object="${cypher}"
+						method="post">
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Adquirente</label> <input
+									type="text" th:field="*{IDACQUIRER}" class="form-control"
+									id="acquirerId" placeholder="IDACQUIRER" />
+							</div>
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Id Comercio</label> <input
+									type="text" th:field="*{IDCOMMERCE}" class="form-control"
+									id="commerceId" placeholder="IDCOMMERCE" />
+							</div>
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Terminal</label> <input
+									type="text" th:field="*{TERMINALCODE}" class="form-control"
+									id="TERMINALCODE" placeholder="terminal" />
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="email" class="col-form-label">XMLREQ</label> <input
+									type="text" th:field="*{XMLREQ}" class="form-control"
+									id="XMLREQ" placeholder="Numero de Operacion" />
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="email" class="col-form-label">DIGITALSIGN</label>
+								<input type="text" th:field="*{DIGITALSIGN}"
+									class="form-control" id="purchaseAmount"
+									placeholder="Numero de Operacion" value="10000" />
+							</div>
+
+
+							<div class="form-group col-md-8">
+								<label for="email" class="col-form-label">SESSIONKEY</label>
+								<input type="text" th:field="*{SESSIONKEY}"
+									class="form-control" id="purchaseAmount"
+									placeholder="Numero de Operacion" value="10000" />
+							</div>
+
+							<div class="col-md-6">
+								<input type="submit" class="btn btn-primary" value=" Submit ">
+							</div>
+
+
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

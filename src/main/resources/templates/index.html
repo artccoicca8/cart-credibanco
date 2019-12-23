@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add Employee</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+	<div class="container my-5">
+		<h3>Carrito Boton de Pago</h3>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-10">
+					<form action="#" th:action="@{/stepTwo}" th:object="${entity}"
+						method="post">
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Adquirente</label> <input
+									type="text" th:field="*{acquirerId}" class="form-control"
+									id="acquirerId"   value="1" />
+							</div>
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Id Comercio</label> <input
+									type="text" th:field="*{commerceId}" class="form-control"
+									id="commerceId"   value="1809" />
+							</div>
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Terminal</label> <input
+									type="text" th:field="*{purchaseTerminalCode}"
+									class="form-control" id="purchaseTerminalCode"
+									placeholder="terminal" value="2907891" />
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="email" class="col-form-label">Numero Op</label> <input
+									type="text" th:field="*{purchaseOperationNumber}"
+									class="form-control" id="purchaseOperationNumber"
+									placeholder="Numero de Operacion" />
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="email" class="col-form-label">PurchaseAmount</label>
+								<input type="text" th:field="*{purchaseAmount}"
+									class="form-control" id="purchaseAmount"
+									placeholder="Numero de Operacion" value="10000" />
+							</div>
+
+							<div class="col-md-6">
+								<input type="submit" class="btn btn-primary" value=" Submit ">
+							</div>
+
+
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
